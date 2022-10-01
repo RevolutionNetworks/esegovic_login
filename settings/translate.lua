@@ -1,13 +1,14 @@
 Translate = {
-    ["wrong_password"] = "Entered Password is incorrect.",
-    ["wrong_username"] = "Entered Username does not exist.",
-    ["no_account"] = "You dont have Registered Account.",
-    ["user_len"] = "Username should contain min. ",
-    ["characters"] = "characters",
-    ["pass_len"] = "Password should contain min. ",
-    ["have_account"] = "You already have an account. Please login!",
-    ["account_created"] = "Account succesffully created. Please login!",
-    ["account_deleted"] = "You account has been delete. Please register again!",
-    ["password_reset"] = "You password is: ",
-    ["wrong_key"] = "You secret key is invalid."
+    ["wrong_password"] = "Dein Passwort ist Falsch.",
+    ["wrong_username"] = "Dein Username ist Falsch.",
+    ["no_account"] = "Du hast noch keinen Account.",
+    ["user_len"] = "Dein Benutzername braucht mindestens. ",
+    ["characters"] = "Zeichen",
+    ["pass_len"] = "Dein Passwort braucht mindestens. ",
+    ["have_account"] = "Du Hast bereits einen Account du. Logge dich ein!",
+    ["account_created"] = "Account wurde Erstellt!",
+    ["account_deleted"] = "Dein Account wurde Gelöscht. Registriere dich Neu!",
+    ["password_reset"] = "Dein Passwort ist: ",
+    ["wrong_key"] = "Dein Secret key lautet.",
+	["not_whitelisted"] = "Du wurdest noch nicht Gewhitelistet!"
 }
