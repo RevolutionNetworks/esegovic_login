@@ -16,15 +16,21 @@ AddEventHandler('esegovic.login', function(user, pass)
             ['@identifier'] = license
         }, function(result)
             if result then
-				MySQL.Async.fetchAll('SELECT username, password FROM esegovic_login WHERE identifier = @identifier', {
+				MySQL.Async.fetchAll('SELECT * FROM esegovic_login WHERE identifier = @identifier', {
 					['@identifier'] = license
 				}, function(result)
 					if #result > 0 then
 						DB_USERNAME = result[1].username;
 						DB_PASSWORD = result[1].password;
+						DB_WHITELIST = result[1].whitelist; -- TEST WHITELIST
+						print(DB_WHITELIST)
 						if DB_USERNAME == user then
 							if DB_PASSWORD == pass then
-								TriggerClientEvent('esegovic.login.loggedin', playerId)
+								if DB_WHITELIST ~= 0 then -- TEST WHITELIST
+									TriggerClientEvent('esegovic.login.loggedin', playerId)
+								else -- TEST WHITELIST
+									TriggerClientEvent('esegovic.login.noti', playerId,  Translate["not_whitelisted"])
+								end -- TEST WHITELIST ENDE
 							else
 								TriggerClientEvent('esegovic.login.noti', playerId,  Translate["wrong_password"])
 							end
